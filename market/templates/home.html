@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container" style="color:white">
+        <form class="form-signin" style="color:white">
+            <h1>Home Page</h1>
+            <br>
+            <p1>Start purchasing by clicking the link below</p1>
+            <br>
+            <br>
+            <img class="img" src="{{url_for('static', filename='images/Click.png')}}" width="250">
+            <br>
+            <br>
+            <a class="btn btn-primary" href="{{ url_for('market_page') }}">Get Started</a>
+        </form>
+    </div>
+</body>
+{% endblock %}

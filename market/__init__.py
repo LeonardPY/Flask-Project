@@ -5,6 +5,7 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '1a196020828e1683a3665729'
 bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
